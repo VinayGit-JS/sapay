@@ -1,3 +1,14 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './features/home/home.component';
+import { AboutComponent } from './features/about/about.component';
+import { ContactComponent } from './features/contact/contact.component';
 
-export const routes: Routes = [];
+// Define the application routes
+export const appRoutes: Routes = [
+    { path: '', redirectTo: '', pathMatch: 'full' },  // Redirect to home page by default
+    { path: '', component: HomeComponent },  // Home page route
+    { path: 'about', component: AboutComponent },  // About page route
+    { path: 'contact', component: ContactComponent },  // contact page route
+
+
+];

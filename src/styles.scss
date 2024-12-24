@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.theme-gradient-text {
+    background-image: linear-gradient(180deg, #00D4AA 0%, #00D455 100%);
+    color: transparent;
+    background-clip: text;
+}
+
+.theme-border {
+    border-image: linear-gradient(180deg, #00D4AA 0%, #00D455 100%) 1;
+    // border-width: 2px;
+    border-style: solid;
+
+}
+
+.navbar {
+    ul li a {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+
+        &.button {
+            font-weight: bold;
+        }
+    }
+
+}
