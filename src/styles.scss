@@ -34,3 +34,126 @@
     }
 
 }
+.process {
+    position: relative;
+
+    &:nth-child(2){
+        max-width: 600px;
+        &::before {
+            content: '';
+            height: 94px;
+            width: 94px;
+            background-image: url(/assets/icons/right-arrow-curved.png);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        &::after {
+            content: '';
+            height: 94px;
+            width: 94px;
+            background-image: url(/assets/icons/right-arrow-curved.png);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+    
+
+}
+
+@media (max-width:1024px) {
+    header {
+        nav {
+            display: none;
+        }
+
+        &.active .mobile {
+            nav {
+                display: block;
+            }
+        }
+    }
+
+    .tech-media {
+        div {
+            display: none;
+        }
+
+        div:nth-child(1) {
+            display: flex;
+        }
+    }
+
+    .technologies {
+        .card {
+            display: none;
+
+            &:nth-child(1), &:nth-child(2),&:nth-child(3) {display: flex;}
+        }
+    }
+    .process{
+        &:nth-child(1) {
+            display: none;
+        }
+        &:nth-child(3) {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .technologies {
+        .card {
+            display: none;
+            &:nth-child(1), &:nth-child(2){
+                display: none;
+            }
+            &:nth-child(3) {display: flex;}
+        }
+    }
+    .process {
+        position: relative;
+    
+        &:nth-child(2){
+            max-width: 600px;
+            &::before {
+                content: '';
+                height: 64px;
+                width: 64px;
+                background-size: cover;
+            }
+            &::after {
+                content: '';
+                height: 64px;
+                width: 64px;
+                background-size: cover;
+            }
+        }
+        
+    
+    }
+}
+@media (max-width:400px) {
+    .mobile nav{
+        width: 100%;
+        ul li a img{
+            width: 20px;
+            &:nth-last-child(1){
+               height: 20px; 
+            }
+        }
+    }
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}

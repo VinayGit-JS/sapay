@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  toggleNavbar(){
+      const header = document.querySelector("header") as HTMLElement;
+      if(header.classList.contains("active")){
+        header.classList.remove("active")
+      }
+      else{
+        header.classList.add("active")
+      }
+  }
 }

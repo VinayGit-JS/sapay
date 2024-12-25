@@ -1,44 +1,113 @@
-<header>
-    <div class="flex bg-[#0F0C1D] h-[50px] justify-between items-center px-[60px]">
-        <div class="left flex gap-x-[10px]">
-            <button
-                class="bg-theme-gradient px-[20px] h-[35px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center">
-                FOR ENQUIRIES, PLEASE CALL
-            </button>
-            <button
-                class="bg-theme-gradient px-[20px] h-[35px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center">
-                <img src="/assets/icons/call.png" class="mr-2" alt="#">
-                Call Us : 0435 00 4653
-            </button>
+<header class="">
+    <div class="desktop lg:block hidden">
+        <div class="flex bg-[#0F0C1D] h-[50px] justify-between items-center px-[60px]">
+            <div class="left flex gap-x-[10px]">
+                <button
+                    class="bg-theme-gradient px-[20px] h-[35px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center">
+                    FOR ENQUIRIES, PLEASE CALL
+                </button>
+                <button
+                    class="bg-theme-gradient px-[20px] h-[35px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center">
+                    <img src="/assets/icons/call.png" class="mr-2" alt="#">
+                    Call Us : 0435 00 4653
+                </button>
+            </div>
+            <div class="right">
+                <div class="social-icons">
+                    <ul class="flex gap-x-[22px]">
+                        <li><a href="#"><img class="w-[20px]" src="assets/icons/facebook.png" alt="social-icons"></a></li>
+                        <li><a href="#"><img class="w-[20px]" src="assets/icons/linkedin.png" alt="social-icons"></a></li>
+                        <li><a href="#"><img class="w-[20px]" src="assets/icons/instagram.png" alt="social-icons"></a></li>
+                        <li><a href="#"><img class="w-[20px]" src="assets/icons/twitter.png" alt="social-icons"></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="right">
-            <div class="social-icons">
-                <ul class="flex gap-x-[22px]">
-                    <li><a href="#"><img src="assets/icons/facebook.png" alt="social-icons"></a></li>
-                    <li><a href="#"><img src="assets/icons/linkedin.png" alt="social-icons"></a></li>
-                    <li><a href="#"><img src="assets/icons/instagram.png" alt="social-icons"></a></li>
-                    <li><a href="#"><img src="assets/icons/twitter.png" alt="social-icons"></a></li>
+        <div class="navbar flex h-[95px] justify-between">
+            <div class="left w-[20%]">
+                <div class="logo bg-theme-gradient flex justify-center items-center w-full h-full"
+                    style="clip-path: polygon(0 0, 100% 0, 87% 100%, 0 100%);">
+                    <h4 class="text-white font-inter font-[400] text-[28px]">Logo</h4>
+                </div>
+            </div>
+            <div class="right h-full mr-[50px]">
+                <ul class="flex h-full items-center gap-x-[50px]">
+                    <li><a style="box-shadow: 0px 4px 4px 0px #00000040;"
+                            class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center button"
+                            href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a style="box-shadow: 0px 4px 4px 0px #00000040;"
+                            class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-md flex items-center justify-center button"
+                            href="#">Button</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="navbar flex h-[95px] justify-between">
-        <div class="left">
-            <div class="logo bg-theme-gradient flex justify-center items-center w-[398px] h-full"
-                style="clip-path: polygon(0 0, 100% 0, 87% 100%, 0 100%);">
-                <h4 class="text-white font-inter font-[400] text-[28px]">Logo</h4>
+    <div class="mobile block lg:hidden">
+        <div class="flex bg-[#0F0C1D] h-[80px] justify-between items-center">
+            <div class="left w-[20%] h-full">
+                <div class="logo bg-theme-gradient flex justify-center items-center w-full h-full"
+                    style="clip-path: polygon(0 0, 100% 0, 87% 100%, 0 100%);">
+                    <h4 class="text-white font-inter font-[400] md:text-[28px] text-[18px]">Logo</h4>
+                </div>
+            </div>
+            <div class="right">
+                <div class="px-4">
+                    <ul class="flex gap-x-[22px]">
+                        <li><a href="#"><img class="w-[32px]" src="assets/icons/facebook.png" alt="social-icons"></a>
+                        </li>
+                        <li><a href="#"><img class="w-[32px]" src="assets/icons/linkedin.png" alt="social-icons"></a>
+                        </li>
+                        <li><a href="#"><img class="w-[32px]" src="assets/icons/instagram.png" alt="social-icons"></a>
+                        </li>
+                        <li><a href="#"><img class="w-[32px]" src="assets/icons/twitter.png" alt="social-icons"></a>
+                        </li>
+                        <li><a href="#" (click)="toggleNavbar()"><img class="h-[32px]" src="assets/icons/bar.png" alt="social-icons"></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="right h-full mr-[50px]">
-            <ul class="flex h-full items-center gap-x-[50px]">
-                <li><a style="box-shadow: 0px 4px 4px 0px #00000040;" class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center button" href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a style="box-shadow: 0px 4px 4px 0px #00000040;" class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-md flex items-center justify-center button" href="#">Button</a></li>
+        <nav class="w-[380px] theme-border border-l-4 fixed top-0 right-0 z-[99] h-[100vh] bg-[#0F0C1D] ">
+            <div class="h-[80px] items-center flex justify-between border-b-2 border-[#fff7] px-[20px]">
+                <div class="" (click)="toggleNavbar()">
+                    <img class="w-[22px] h-[22px]" src="assets/icons/cross.png" alt="social-icons">
+                </div>
+                <ul class="flex h-full items-center gap-x-[22px]">
+                    <li><a href="#"><img class="w-[32px]" src="assets/icons/facebook.png" alt="social-icons"></a>
+                    </li>
+                    <li><a href="#"><img class="w-[32px]" src="assets/icons/linkedin.png" alt="social-icons"></a>
+                    </li>
+                    <li><a href="#"><img class="w-[32px]" src="assets/icons/instagram.png" alt="social-icons"></a>
+                    </li>
+                    <li><a href="#"><img class="w-[32px]" src="assets/icons/twitter.png" alt="social-icons"></a>
+                    </li>
+                    <li><a href="#" (click)="toggleNavbar()"><img class="h-[32px]" src="assets/icons/bar.png" alt="social-icons"></a></li>
+                </ul>
+            </div>
+            <ul class="mt-[30px] flex flex-col gap-y-4 px-[30px]">
+                <li><a style="box-shadow: 0px 4px 4px 0px #00000040;"
+                        class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center button"
+                        href="#">Home</a></li>
+                <li><a style="box-shadow: 0px 4px 4px 0px #00000040;"
+                        class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center button"
+                        href="#">Services</a></li>
+                <li><a style="box-shadow: 0px 4px 4px 0px #00000040;"
+                        class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center button"
+                        href="#">Career</a></li>
+                <li><a style="box-shadow: 0px 4px 4px 0px #00000040;"
+                        class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center button"
+                        href="#">About us</a></li>
+                <li><a style="box-shadow: 0px 4px 4px 0px #00000040;"
+                        class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center button"
+                        href="#">Product</a></li>
+                <li><a style="box-shadow: 0px 4px 4px 0px #00000040;"
+                        class="bg-theme-gradient px-[20px] h-[45px] text-[12px] font-inter text-white font-bold border-2 border-white rounded-full flex items-center justify-center button"
+                        href="#">Contact us</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
 </header>
