@@ -1,0 +1,36 @@
+@media screen and (max-width: 768px) {
+  /* For smaller screens (<= 768px), show 1 item and make the container scrollable */
+  .carousel {
+    display: flex;
+    overflow-x: scroll; /* Horizontal scrolling */
+  }
+
+  .carousel > div {
+    flex: 0 0 auto; /* Don't let the items stretch */
+    margin: auto;
+    width: 100%;
+  }
+
+  /* Optional: Hide the scrollbar for better UI */
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .overflow-x-auto {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+  }
+
+
+}
+
+@media screen and (min-width: 769px) {
+  /* For larger screens, display 3 columns as usual */
+  .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
