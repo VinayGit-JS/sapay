@@ -1,15 +1,30 @@
+.carousel::-webkit-scrollbar {
+  display: none;
+}
 @media screen and (max-width: 768px) {
+
   /* For smaller screens (<= 768px), show 1 item and make the container scrollable */
   .carousel {
     display: flex;
-    overflow-x: scroll; /* Horizontal scrolling */
+    overflow-x: scroll;
+
+    /* Horizontal scrolling */
+    &>div {
+      flex: 0 0 auto;
+      /* Don't let the items stretch */
+      margin: auto;
+      width: 100%;
+    }
+
+    &.grid-6 {
+      display: flex;
+
+      &>div {
+        width: 100%;
+      }
+    }
   }
 
-  .carousel > div {
-    flex: 0 0 auto; /* Don't let the items stretch */
-    margin: auto;
-    width: 100%;
-  }
 
   /* Optional: Hide the scrollbar for better UI */
   .carousel::-webkit-scrollbar {
@@ -17,20 +32,52 @@
   }
 
   .overflow-x-auto {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* For smooth scrolling on iOS */
   }
 
 
 }
 
 @media screen and (min-width: 769px) {
+
   /* For larger screens, display 3 columns as usual */
   .carousel {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    &.single {
+      display: flex;
+      overflow-x: scroll;
+    }
+
+    &.grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.grid-6 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+
+      &>div {
+        scroll-snap-align: start;
+      }
+    }
+
+    
   }
-  ::-webkit-scrollbar {
-    display: none;
+}
+
+@media (min-width:1280px) {
+  .carousel {
+    &.grid-6 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
 }

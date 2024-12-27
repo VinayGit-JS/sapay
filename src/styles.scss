@@ -34,11 +34,13 @@
     }
 
 }
+
 .process {
     position: relative;
 
-    &:nth-child(2){
+    &:nth-child(2) {
         max-width: 600px;
+
         &::before {
             content: '';
             height: 94px;
@@ -49,6 +51,7 @@
             top: 50%;
             transform: translate(0, -50%);
         }
+
         &::after {
             content: '';
             height: 94px;
@@ -60,7 +63,7 @@
             transform: translate(0, -50%);
         }
     }
-    
+
 
 }
 
@@ -77,27 +80,13 @@
         }
     }
 
-    .tech-media {
-        div {
-            display: none;
-        }
 
-        div:nth-child(1) {
-            display: flex;
-        }
-    }
 
-    .technologies {
-        .card {
-            display: none;
-
-            &:nth-child(1), &:nth-child(2),&:nth-child(3) {display: flex;}
-        }
-    }
-    .process{
+    .process {
         &:nth-child(1) {
             display: none;
         }
+
         &:nth-child(3) {
             display: none;
         }
@@ -105,26 +94,20 @@
 }
 
 @media (max-width:767px) {
-    .technologies {
-        .card {
-            display: none;
-            &:nth-child(1), &:nth-child(2){
-                display: none;
-            }
-            &:nth-child(3) {display: flex;}
-        }
-    }
+    
     .process {
         position: relative;
-    
-        &:nth-child(2){
+
+        &:nth-child(2) {
             max-width: 600px;
+
             &::before {
                 content: '';
                 height: 64px;
                 width: 64px;
                 background-size: cover;
             }
+
             &::after {
                 content: '';
                 height: 64px;
@@ -132,21 +115,25 @@
                 background-size: cover;
             }
         }
-        
-    
+
+
     }
 }
+
 @media (max-width:400px) {
-    .mobile nav{
+    .mobile nav {
         width: 100%;
-        ul li a img{
+
+        ul li a img {
             width: 20px;
-            &:nth-last-child(1){
-               height: 20px; 
+
+            &:nth-last-child(1) {
+                height: 20px;
             }
         }
     }
 }
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -156,4 +143,11 @@
 .form-group label {
     margin-bottom: 5px;
     font-size: 14px;
+}
+
+.carousel {
+    scroll-snap-type: x mandatory;
+    &>div {
+        scroll-snap-align: center;
+    }
 }
