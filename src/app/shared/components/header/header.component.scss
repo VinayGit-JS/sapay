@@ -1,0 +1,14 @@
+.active {
+  background: linear-gradient(180deg, #00d4aa 0%, #00d455 100%);
+  color: white; /* Text color */
+  font-family: 'Arial', sans-serif; /* Font style */
+  font-size: 20px; /* Font size */
+  font-weight: bold; /* Font weight */
+  padding: 10px 30px; /* Padding for size */
+  border: 2px solid white; /* White border outline */
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  text-align: center; /* Center the text */
+  display: inline-block; /* For proper button behavior */
+  cursor: pointer; /* Pointer on hover */
+}
