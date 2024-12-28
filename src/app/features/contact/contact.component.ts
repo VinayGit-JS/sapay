@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  emailAddress:string = 'sa.store02@gmail.com'
+
 }
