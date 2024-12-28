@@ -34,11 +34,13 @@
     }
 
 }
+
 .process {
     position: relative;
 
-    &:nth-child(2){
+    &:nth-child(2) {
         max-width: 600px;
+
         &::before {
             content: '';
             height: 94px;
@@ -49,6 +51,7 @@
             top: 50%;
             transform: translate(0, -50%);
         }
+
         &::after {
             content: '';
             height: 94px;
@@ -60,7 +63,7 @@
             transform: translate(0, -50%);
         }
     }
-    
+
 
 }
 
@@ -77,27 +80,13 @@
         }
     }
 
-    .tech-media {
-        div {
-            display: none;
-        }
 
-        div:nth-child(1) {
-            display: flex;
-        }
-    }
 
-    .technologies {
-        .card {
-            display: none;
-
-            &:nth-child(1), &:nth-child(2),&:nth-child(3) {display: flex;}
-        }
-    }
-    .process{
+    .process {
         &:nth-child(1) {
             display: none;
         }
+
         &:nth-child(3) {
             display: none;
         }
@@ -105,26 +94,20 @@
 }
 
 @media (max-width:767px) {
-    .technologies {
-        .card {
-            display: none;
-            &:nth-child(1), &:nth-child(2){
-                display: none;
-            }
-            &:nth-child(3) {display: flex;}
-        }
-    }
+
     .process {
         position: relative;
-    
-        &:nth-child(2){
+
+        &:nth-child(2) {
             max-width: 600px;
+
             &::before {
                 content: '';
                 height: 64px;
                 width: 64px;
                 background-size: cover;
             }
+
             &::after {
                 content: '';
                 height: 64px;
@@ -132,21 +115,25 @@
                 background-size: cover;
             }
         }
-        
-    
+
+
     }
 }
+
 @media (max-width:400px) {
-    .mobile nav{
+    .mobile nav {
         width: 100%;
-        ul li a img{
+
+        ul li a img {
             width: 20px;
-            &:nth-last-child(1){
-               height: 20px; 
+
+            &:nth-last-child(1) {
+                height: 20px;
             }
         }
     }
 }
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -156,4 +143,101 @@
 .form-group label {
     margin-bottom: 5px;
     font-size: 14px;
+}
+
+.carousel, .team-wrap {
+    scroll-snap-type: x mandatory;
+
+    &>div {
+        scroll-snap-align: center;
+    }
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.journey {
+    background-image: linear-gradient(180deg, rgba(0, 212, 170, 0.06) 0%, rgba(0, 212, 85, 0.06) 100%);
+}
+
+@media screen and (max-width: 768px) {
+
+    /* For smaller screens (<= 768px), show 1 item and make the container scrollable */
+    .carousel {
+        display: flex;
+        overflow-x: scroll;
+
+        /* Horizontal scrolling */
+        &>div {
+            flex: 0 0 auto;
+            /* Don't let the items stretch */
+            margin: auto;
+            width: 100%;
+        }
+
+        &.grid-6 {
+            display: flex;
+
+            &>div {
+                width: 100%;
+            }
+        }
+    }
+
+
+    /* Optional: Hide the scrollbar for better UI */
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .overflow-x-auto {
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch;
+        /* For smooth scrolling on iOS */
+    }
+
+
+}
+
+@media screen and (min-width: 769px) {
+
+    /* For larger screens, display 3 columns as usual */
+    .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &.single {
+            display: flex;
+            overflow-x: scroll;
+        }
+
+        &.grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &.grid-6 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+
+            &>div {
+                scroll-snap-align: start;
+            }
+        }
+
+
+    }
+}
+
+@media (min-width:1280px) {
+    .carousel {
+        &.grid-6 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
 }

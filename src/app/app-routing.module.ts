@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },  // Redirect to Home page on app load
   { path: '/', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about-us', component: AboutComponent },
   // You can add more routes here for additional pages or components
 ];
 
