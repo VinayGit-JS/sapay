@@ -11,7 +11,7 @@ export const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },  // Redirect to home page by default
     { path: '', component: HomeComponent },  // Home page route
     { path: 'home', component: HomeComponent },  // Home page route
-    { path: 'about', component: AboutComponent },  // About page route
+    { path: 'about-us', component: AboutComponent },  // About page route
     { path: 'contact', component: ContactComponent },  // contact page route
     { path: 'refund-policy', component: RefundPolicyComponent },  // refund policy route
     { path: 'privacy-policy', component: PrivacyPolicyComponent },  // refund policy route
