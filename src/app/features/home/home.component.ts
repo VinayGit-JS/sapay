@@ -10,11 +10,17 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeComponent {
+
+
+
   sportsAndGames: any;
+
 
   constructor() { }
 
   ngOnInit(): void {
+
+
     this.sportsAndGames = {
       loop: true,
       margin: 10,

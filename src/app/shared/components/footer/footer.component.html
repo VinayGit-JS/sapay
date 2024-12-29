@@ -32,7 +32,7 @@
       <div>
         <h3 class="text-lg font-semibold mb-4">PRODUCTS</h3>
         <ul class="space-y-2 text-sm">
-          <li>Recharge Software Money</li>
+          <li>Recharge Software</li>
           <li>Hotel Management Software</li>
           <li>HRMS Software</li>
           <li>Management Software</li>
@@ -95,12 +95,12 @@
       >
         <!-- Left Section -->
         <div class="text-center md:text-left text-sm">
-          Copyright © 2024 - 0000
+          Copyright © 2023-{{ getCurrentYear }}
           <span class="font-semibold">Sa Developers</span>. | All rights
           reserved.
         </div>
         <!-- Right Section -->
-        <div
+        <!-- <div
           class="flex flex-wrap justify-center md:justify-end mt-2 md:mt-0 space-x-4 text-sm"
         >
           <a routerLink="privacy-policy" class="hover:underline"
@@ -110,7 +110,22 @@
           <a routerLink="refund-policy" class="hover:underline"
             >Refund & Cancellation Policy</a
           >
+        </div> -->
+
+        <div class="flex flex-wrap justify-center md:justify-end mt-2 md:mt-0 space-x-6 text-sm">
+          <a routerLink="privacy-policy" class="hover:underline relative flex items-center pl-6 before:content-['•'] before:text-white before:text-2xl before:mr-2">
+            Privacy Policy
+          </a>
+          <a href="#" class="hover:underline relative flex items-center pl-6 before:content-['•'] before:text-white before:text-2xl before:mr-2">
+            Terms and Conditions
+          </a>
+          <a routerLink="refund-policy" class="hover:underline relative flex items-center pl-6 before:content-['•'] before:text-white before:text-2xl before:mr-2">
+            Refund & Cancellation Policy
+          </a>
         </div>
+        
+        
+        
       </div>
     </div>
   </footer>
