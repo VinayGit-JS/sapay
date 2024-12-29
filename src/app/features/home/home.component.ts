@@ -35,5 +35,20 @@ export class HomeComponent {
         }
       }
     };
+    const carousels = document.querySelectorAll(".carousel") as NodeListOf<Element>
+    console.log(carousels)
+    setInterval(() => {
+      carousels.forEach((item, index) => {
+        var itemWidth = item.querySelector("div")?.clientWidth;
+        if (itemWidth) {
+          if (item.scrollWidth - itemWidth > item.scrollLeft + itemWidth) {
+            item.scrollTo({ left: item.scrollLeft + itemWidth, top: 0, behavior: "smooth" })
+          }
+          else {
+            item.scrollTo({ left: 0, top: 0, behavior: "smooth" })
+          }
+        }
+      })
+    }, 5000)
   }
 }
