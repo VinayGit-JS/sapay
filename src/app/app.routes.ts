@@ -5,6 +5,7 @@ import { ContactComponent } from './features/contact/contact.component';
 import { RefundPolicyComponent } from './features/refund-policy/refund-policy.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { PrivacyPolicyComponent } from './features/privacy-policy/privacy-policy.component';
+import { ProductsComponent } from './features/products/products.component';
 
 // Define the application routes
 export const appRoutes: Routes = [
@@ -12,6 +13,8 @@ export const appRoutes: Routes = [
     { path: '', component: HomeComponent },  // Home page route
     { path: 'home', component: HomeComponent },  // Home page route
     { path: 'about-us', component: AboutComponent },  // About page route
+    { path: 'about-us', component: AboutComponent },  // About page route
+    { path: 'product', component: ProductsComponent },  // product page route
     { path: 'contact', component: ContactComponent },  // contact page route
     { path: 'refund-policy', component: RefundPolicyComponent },  // refund policy route
     { path: 'privacy-policy', component: PrivacyPolicyComponent },  // refund policy route
