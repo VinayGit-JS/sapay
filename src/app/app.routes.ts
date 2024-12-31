@@ -1,26 +1,19 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './features/home/home.component';
-import { AboutComponent } from './features/about/about.component';
-import { ContactComponent } from './features/contact/contact.component';
-import { RefundPolicyComponent } from './features/refund-policy/refund-policy.component';
-import { NotFoundComponent } from './features/not-found/not-found.component';
-import { PrivacyPolicyComponent } from './features/privacy-policy/privacy-policy.component';
-import { ProductsComponent } from './features/products/products.component';
+import { HomeComponent } from '../app/features/home/home.component';
+import { AboutComponent } from '../app/features/about/about.component';
+import { ProductsComponent } from '../app/features/products/products.component';
+import { ContactComponent } from '../app/features/contact/contact.component';
+import { RefundPolicyComponent } from '../app/features/refund-policy/refund-policy.component';
+import { PrivacyPolicyComponent } from '../app/features/privacy-policy/privacy-policy.component';
+import { NotFoundComponent } from '../app/features/not-found/not-found.component';
 
-// Define the application routes
 export const appRoutes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },  // Redirect to home page by default
-    { path: '', component: HomeComponent },  // Home page route
-    { path: 'home', component: HomeComponent },  // Home page route
-    { path: 'about-us', component: AboutComponent },  // About page route
-    { path: 'about-us', component: AboutComponent },  // About page route
-    { path: 'product', component: ProductsComponent },  // product page route
-    { path: 'contact', component: ContactComponent },  // contact page route
-    { path: 'refund-policy', component: RefundPolicyComponent },  // refund policy route
-    { path: 'privacy-policy', component: PrivacyPolicyComponent },  // refund policy route
-    { path: '**', component: NotFoundComponent },  // not found route if any route not match
-
-
-
-
+  { path: '', redirectTo: 'home', pathMatch: 'full' },  // Redirect to home page by default
+  { path: 'home', component: HomeComponent },           // Home page route
+  { path: 'about-us', component: AboutComponent },      // About page route
+  { path: 'product', component: ProductsComponent },    // Product page route
+  { path: 'contact', component: ContactComponent },     // Contact page route
+  { path: 'refund-policy', component: RefundPolicyComponent }, // Refund policy route
+  { path: 'privacy-policy', component: PrivacyPolicyComponent }, // Privacy policy route
+  { path: '**', component: NotFoundComponent }          // Wildcard route for unmatched paths
 ];
