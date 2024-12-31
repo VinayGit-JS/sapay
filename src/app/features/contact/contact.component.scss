@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  .faq-section {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .faq-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .faq-header {
+    background-color: #f7f7f7;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .faq-header:hover {
+    background-color: #e9e9e9;
+  }
+
+  .faq-header::after {
+    content: '+';
+    font-size: 18px;
+    
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px; /* Set width of the circle */
+        height: 36px; /* Set height of the circle */
+        background-color: #28a745; /* Green background color */
+        color: #ffffff; /* White color for the "+" symbol */
+        border-radius: 50%; /* Makes it a perfect circle */
+        font-size: 20px; /* Font size for the "+" symbol */
+        font-weight: bold; /* Bold text */
+        border: none; /* Removes any border */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for a subtle effect */
+        cursor: pointer; /* Changes cursor to pointer on hover */
+      
+      
+  }
+
+  input[type="checkbox"]:checked + .faq-header::after {
+    content: '-';
+  }
+
+  .faq-content {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
+
+  input[type="checkbox"]:checked ~ .faq-content {
+    display: block;
+  }
+
+  .faq-content p {
+    margin: 0;
+  }

@@ -56,5 +56,8 @@ export class HomeComponent {
         }
       })
     }, 5000)
+
   }
+
+  
 }
