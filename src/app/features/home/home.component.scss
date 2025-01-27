@@ -1,0 +1,27 @@
+/* Styling for the scrolling container */
+.scroll-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .scrolling-content {
+    display: flex;
+    gap: 1rem;
+    animation: scroll 20s linear infinite;
+  }
+
+  /* Smooth infinite scrolling */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .scrolling-content > div {
+    flex: none;
+    width: 350px;
+  }

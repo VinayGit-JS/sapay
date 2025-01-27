@@ -1,0 +1,13 @@
+<div *ngFor="let question of questions; let i = index" class="faq-item">
+    <div class="faq-question" (click)="toggleAnswer(i)">
+      {{ question.text }}
+      <button>
+        {{ question.open ? '-' : '+' }}
+      </button>
+    </div>
+    <div class="faq-answer" *ngIf="question.open">
+      {{ question.answer }}
+    </div>
+  </div>
+  
+

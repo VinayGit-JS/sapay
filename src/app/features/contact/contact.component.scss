@@ -72,3 +72,90 @@ body {
   .faq-content p {
     margin: 0;
   }
+
+
+
+
+/* Outer container */
+.carousel-container {
+  position: relative;
+  overflow-x: auto; /* Allow horizontal scrolling for all cards */
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9;
+  padding: 10px 0;
+  white-space: nowrap; /* Prevent wrapping of cards */
+}
+
+/* Inner carousel */
+.carousel {
+  display: inline-flex; /* Inline flex to support horizontal scroll */
+  gap: 15px;
+  animation: scroll 20s linear infinite; /* Smooth continuous animation */
+}
+
+/* Individual cards */
+.card {
+  flex: 0 0 300px; /* Default card width */
+  height: 200px; /* Default card height */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block; /* Ensure cards appear in a row */
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+  .carousel-container {
+    overflow-x: scroll; /* Allow manual horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth manual scrolling */
+    -webkit-overflow-scrolling: touch; /* Enable touch momentum */
+  }
+
+  .card {
+    flex: 0 0 220px; /* Adjust card width for mobile */
+    height: 180px;
+  }
+
+  .card h3 {
+    font-size: 14px; /* Smaller heading size */
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  /* Remove animation for manual scrolling on mobile */
+  .carousel {
+    animation: none; /* Users can scroll manually on mobile */
+  }
+}

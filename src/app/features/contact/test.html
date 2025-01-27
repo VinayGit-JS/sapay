@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Scrolling Cards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Styling for the scrolling container */
+    .scroll-container {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scrolling-content {
+      display: flex;
+      gap: 1rem;
+      animation: scroll 20s linear infinite;
+    }
+
+    /* Smooth infinite scrolling */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .scrolling-content > div {
+      flex: none;
+      width: 250px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="p-6">
+    <h1 class="text-2xl font-bold mb-4">Service Portals</h1>
+    <!-- Scrolling Container -->
+    <div class="scroll-container">
+      <div class="scrolling-content">
+        <!-- Original Cards -->
+        <div class="min-w-[250px] bg-gray-50 rounded-lg shadow p-4">
+          <div class="h-16 bg-gray-200 rounded mb-4 flex items-center justify-center">
+            <span class="text-gray-500">Icon</span>
+          </div>
+          <h2 class="text-lg font-semibold mb-2">Banking Portal</h2>
+          <p class="text-gray-600 text-sm">
+            Neo banking for managing financial transactions.
+          </p>
+        </div>
+
+        <div class="min-w-[250px] bg-gray-50 rounded-lg shadow p-4">
+          <div class="h-16 bg-gray-200 rounded mb-4 flex items-center justify-center">
+            <span class="text-gray-500">Icon</span>
+          </div>
+          <h2 class="text-lg font-semibold mb-2">School Management</h2>
+          <p class="text-gray-600 text-sm">
+            Student registration, attendance, payments, and more.
+          </p>
+        </div>
+
+        <div class="min-w-[250px] bg-gray-50 rounded-lg shadow p-4">
+          <div class="h-16 bg-gray-200 rounded mb-4 flex items-center justify-center">
+            <span class="text-gray-500">Icon</span>
+          </div>
+          <h2 class="text-lg font-semibold mb-2">Hospital Management</h2>
+          <p class="text-gray-600 text-sm">
+            Manage patients, staff, inventory, billing, and more.
+          </p>
+        </div>
+
+        <div class="min-w-[250px] bg-gray-50 rounded-lg shadow p-4">
+          <div class="h-16 bg-gray-200 rounded mb-4 flex items-center justify-center">
+            <span class="text-gray-500">Icon</span>
+          </div>
+          <h2 class="text-lg font-semibold mb-2">User Management</h2>
+          <p class="text-gray-600 text-sm">
+            User and profile management with admin controls.
+          </p>
+        </div>
+
+        <!-- Duplicate Cards -->
+        <div class="min-w-[250px] bg-gray-50 rounded-lg shadow p-4">
+          <div class="h-16 bg-gray-200 rounded mb-4 flex items-center justify-center">
+            <span class="text-gray-500">Icon</span>
+          </div>
+          <h2 class="text-lg font-semibold mb-2">Banking Portal</h2>
+          <p class="text-gray-600 text-sm">
+            Neo banking for managing financial transactions.
+          </p>
+        </div>
+
+        <div class="min-w-[250px] bg-gray-50 rounded-lg shadow p-4">
+          <div class="h-16 bg-gray-200 rounded mb-4 flex items-center justify-center">
+            <span class="text-gray-500">Icon</span>
+          </div>
+          <h2 class="text-lg font-semibold mb-2">School Management</h2>
+          <p class="text-gray-600 text-sm">
+            Student registration, attendance, payments, and more.
+          </p>
+        </div>
+
+        <div class="min-w-[250px] bg-gray-50 rounded-lg shadow p-4">
+          <div class="h-16 bg-gray-200 rounded mb-4 flex items-center justify-center">
+            <span class="text-gray-500">Icon</span>
+          </div>
+          <h2 class="text-lg font-semibold mb-2">Hospital Management</h2>
+          <p class="text-gray-600 text-sm">
+            Manage patients, staff, inventory, billing, and more.
+          </p>
+        </div>
+
+        <div class="min-w-[250px] bg-gray-50 rounded-lg shadow p-4">
+          <div class="h-16 bg-gray-200 rounded mb-4 flex items-center justify-center">
+            <span class="text-gray-500">Icon</span>
+          </div>
+          <h2 class="text-lg font-semibold mb-2">User Management</h2>
+          <p class="text-gray-600 text-sm">
+            User and profile management with admin controls.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

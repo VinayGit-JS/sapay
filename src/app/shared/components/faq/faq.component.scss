@@ -1,0 +1,52 @@
+/* Container for each FAQ item */
+.faq-item {
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 10px; /* Space between FAQ items */
+  padding: 15px 20px; /* Inner padding */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for the question row */
+.faq-question {
+  display: flex;
+  justify-content: space-between; /* Align text and button */
+  align-items: center; /* Center vertically */
+  font-size: 16px; /* Question text size */
+  font-weight: bold; /* Bold font */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Button (+/-) styling */
+button {
+  background-color: #28a745; /* Green color */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Make it circular */
+  width: 30px; /* Fixed width */
+  height: 30px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the text */
+  font-size: 18px; /* Font size of + or - */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Expanded answer */
+.faq-answer {
+  margin-top: 10px; /* Space between question and answer */
+  padding: 10px; /* Padding inside the answer */
+  background-color: #f9f9f9; /* Light gray background */
+  border-top: 1px solid #ccc; /* Top border */
+  font-size: 14px; /* Smaller text size */
+  color: #555; /* Dark gray text */
+}
